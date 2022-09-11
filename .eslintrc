@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "react", "sonarjs"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/typescript",
+    "plugin:sonarjs/recommended"
+  ],
+  "overrides": [
+    { "files": "!app/ui-kit/**/*", "rules": { "no-restricted-imports": 0 } }
+  ],
+  "rules": {
+    "no-console": "error",
+    "no-shadow": "off",
+    "no-useless-constructor": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": ["vision"]
+      }
+    ],
+    "import/order": "error",
+    "import/no-cycle": "error",
+    "import/no-unused-modules": "error",
+    "import/no-duplicates": "error",
+    "import/first": "error",
+    "complexity": [
+      "error",
+      {
+        "max": 15
+      }
+    ],
+    "sonarjs/cognitive-complexity": "off",
+    "no-extra-boolean-cast": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/rules-of-hooks": "off", //breaks wrapping react components with mobx observer as of installed version
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never" }
+    ]
+  }
+}

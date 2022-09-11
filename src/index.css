@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.deck-tooltip {
+  font-size: 0.8em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#deckgl-wrapper {
+  left: 50% !important;
+  width: 50% !important;
+  padding: 10 !important;
+}
+
+.webgl-scene {
+  width: 50%;
+}
+
+.deckgl-scene {
+  width: 50%;
+}
+
+.image-selector {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.image-selector img {
+  cursor: pointer;
+}
