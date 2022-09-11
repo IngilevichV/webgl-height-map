@@ -1,1 +1,1 @@
-# aaurora-webgl
+# Webgl height map
